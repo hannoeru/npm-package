@@ -20,7 +20,7 @@
     "dev": "npm run build -- --watch",
     "build": "tsup src/index.ts --dts --format cjs,esm",
     "prepublishOnly": "npm run build",
-    "release": "npx bumpp --push --tag --commit && npm publish",
+    "release": "npx git-ensure -a && npx bumpp --push --tag --commit",
     "example:dev": "npm -C example run dev",
     "example:build": "npm -C example run build"
   },
@@ -29,9 +29,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.4.3",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
     "eslint": "^7.21.0",
-    "rollup": "^2.40.0",
     "tsup": "^4.6.1",
     "typescript": "^4.2.3"
   }

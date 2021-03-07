@@ -1,8 +1,8 @@
-import { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-const config: UserConfig = {
+const config = defineConfig({
   plugins: [vue()],
-}
+})
 
 export default config
